@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 
-const Root = () => {
+const MainLayout = () => {
   return (
     <main className="text-pretty">
       <Outlet />
@@ -8,4 +8,4 @@ const Root = () => {
   );
 };
 
-export default Root;
+export default MainLayout;
