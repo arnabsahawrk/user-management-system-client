@@ -3,6 +3,8 @@ import MainLayout from "../layouts/MainLayout";
 import ErrorLayout from "../layouts/ErrorLayout";
 import HomePage from "../pages/HomePage";
 import NewUserPage from "../pages/NewUserPage";
+import UpdateUserPage from "../pages/UpdateUserPage";
+import axios from "axios";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +19,14 @@ const router = createBrowserRouter([
       {
         path: "/newUser",
         element: <NewUserPage />,
+      },
+      {
+        path: "/updateUser/:id",
+        element: <UpdateUserPage />,
+        loader: ({ params }) =>
+          axios.get(
+            `https://user-management-system-server-pearl.vercel.app/${params.id}`
+          ),
       },
     ],
   },

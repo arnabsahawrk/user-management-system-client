@@ -111,9 +111,12 @@ const HomePage = () => {
                               <p>{user?.status || "None"}</p>
                             </td>
                             <td className="p-3 ml-4 text-right flex flex-col md:flex-row justify-between items-center gap-4">
-                              <button className="flex items-center gap-3 text-[#773BE3] px-2.5 py-1.5 shadow-md font-bold border">
+                              <Link
+                                to={`/updateUser/${user?._id || "None"}`}
+                                className="flex items-center gap-3 text-[#773BE3] px-2.5 py-1.5 shadow-md font-bold border"
+                              >
                                 <MdEdit />
-                              </button>
+                              </Link>
                               <button
                                 onClick={() =>
                                   handleDelete(user?._id || "None")
