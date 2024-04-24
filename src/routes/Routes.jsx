@@ -25,7 +25,7 @@ const router = createBrowserRouter([
         element: <UpdateUserPage />,
         loader: ({ params }) =>
           axios.get(
-            `https://user-management-system-server-pearl.vercel.app/${params.id}`
+            `https://user-management-system-server-pearl.vercel.app/users/${params.id}`
           ),
       },
     ],
